@@ -1,0 +1,58 @@
+---
+title: " Leaf mass per area, not total leaf area, drives differences in above-ground biomass distribution among woody plant functional types"
+author: "Anna Krystalli & Sinziana Paltineanu"
+date: "24/11/2016"
+output: html_document
+---
+
+***
+
+<br>
+
+# setup
+
+First we install `remake`.
+
+```{r, eval=FALSE}
+devtools::install_github("richfitz/remake", dependencies=TRUE)
+```
+
+We also need to install `storr`.
+
+```{r, eval=FALSE}
+devtools::install_github("richfitz/storr", dependencies=TRUE)
+```
+
+Because we only want to install once, we've set the above chunks not to evaluate once the software is installed.
+
+<br>
+
+# download paper resources
+
+We've downloaded the resources associated with the paper and unzipped them. The materials are located in folder `./baadanalysis-master/`. Because the default behaviour of .Rmd is to set the working directory to the directory in which the `.Rmd` is located, we move the .Rmd the `./baadanalysis-master/` directory.
+
+## install missing packages
+
+```{r, eval=FALSE}
+remake::install_missing_packages()
+```
+Indeed, the above command didn't install the `baad.data` package so we run the following code:
+```{r, eval=FALSE}
+devtools::install_github("richfitz/datastorr")
+devtools::install_github("traitecoevo/baad.data")
+```
+
+
+# make paper!
+
+```{r}
+remake::make("figures")
+```
+
+Oooops. Not working!
+
+Error: `Error in unloadNamespace(package) : 
+  namespace ‘stringr’ is imported by ‘evaluate’ so cannot be unloaded
+Error in library(p, character.only = TRUE, quietly = TRUE) : 
+  Package ‘stringr’ version 1.0.0 cannot be unloaded`
+
