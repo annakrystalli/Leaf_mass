@@ -13,7 +13,7 @@
 .remake
 downloads
 
-*.log
+
 *.pdf
 *.png
 *.rtf
