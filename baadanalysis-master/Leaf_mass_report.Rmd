@@ -1,9 +1,14 @@
 ---
-title: " Leaf mass per area, not total leaf area, drives differences in above-ground biomass distribution among woody plant functional types"
+title: ' Leaf mass per area, not total leaf area, drives differences in above-ground
+  biomass distribution among woody plant functional types'
 author: "Anna Krystalli & Sinziana Paltineanu"
 date: "24/11/2016"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
+
+Resources associated with paper: https://github.com/RemkoDuursma/baadanalysis
 
 ***
 
@@ -45,14 +50,17 @@ devtools::install_github("traitecoevo/baad.data")
 
 # make paper!
 
+
+
 ```{r}
-remake::make("figures")
+remake::make()
 ```
 
-Oooops. Not working!
 
-Error: `Error in unloadNamespace(package) : 
-  namespace ‘stringr’ is imported by ‘evaluate’ so cannot be unloaded
-Error in library(p, character.only = TRUE, quietly = TRUE) : 
-  Package ‘stringr’ version 1.0.0 cannot be unloaded`
+### **The function recreated all the figures and a pdf of the paper. AWESOME!!**
 
+Links to the materials created:
+
+- [**manuscript.pdf**](https://github.com/annakrystalli/Leaf_mass/blob/master/baadanalysis-master/manuscript.pdf)
+- [**manuscript_suppinfo.pdf**](https://github.com/annakrystalli/Leaf_mass/blob/master/baadanalysis-master/manuscript_suppinfo.pdf)
+- [**figures**](https://github.com/annakrystalli/Leaf_mass/tree/master/baadanalysis-master/figures)
