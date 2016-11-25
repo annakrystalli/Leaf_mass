@@ -123,6 +123,7 @@ $(document).ready(function () {
 </div>
 
 
+<p>Resources associated with paper: <a href="https://github.com/RemkoDuursma/baadanalysis" class="uri">https://github.com/RemkoDuursma/baadanalysis</a></p>
 <hr />
 <p><br></p>
 <div id="setup" class="section level1">
@@ -136,7 +137,62 @@ $(document).ready(function () {
 </div>
 <div id="download-paper-resources" class="section level1">
 <h1>download paper resources</h1>
-<p>We’ve downloaded the resources associated with the paper and unzipped them. The materials are located in folder <code>./baadanalysis-master/</code></p>
+<p>We’ve downloaded the resources associated with the paper and unzipped them. The materials are located in folder <code>./baadanalysis-master/</code>. Because the default behaviour of .Rmd is to set the working directory to the directory in which the <code>.Rmd</code> is located, we move the .Rmd the <code>./baadanalysis-master/</code> directory.</p>
+<div id="install-missing-packages" class="section level2">
+<h2>install missing packages</h2>
+<pre class="r"><code>remake::install_missing_packages()</code></pre>
+<p>Indeed, the above command didn’t install the <code>baad.data</code> package so we run the following code:</p>
+<pre class="r"><code>devtools::install_github(&quot;richfitz/datastorr&quot;)
+devtools::install_github(&quot;traitecoevo/baad.data&quot;)</code></pre>
+</div>
+</div>
+<div id="make-paper" class="section level1">
+<h1>make paper!</h1>
+<pre class="r"><code>remake::make()</code></pre>
+<pre><code>## [  LOAD ]</code></pre>
+<pre><code>## [  READ ]                                           |  # loading sources</code></pre>
+<pre><code>## &lt;  MAKE &gt; all</code></pre>
+<pre><code>## [    OK ] baad_all</code></pre>
+<pre><code>## [    OK ] downloads/ian-symbol-eucalyptus-spp-1.png</code></pre>
+<pre><code>## [    OK ] world_mapmat</code></pre>
+<pre><code>## [    OK ] baad_climate1</code></pre>
+<pre><code>## [    OK ] baad_mapmat</code></pre>
+<pre><code>## [    OK ] baad_climate2</code></pre>
+<pre><code>## [    OK ] baad_climate3</code></pre>
+<pre><code>## [    OK ] dataset</code></pre>
+<pre><code>## [    OK ] basalafit</code></pre>
+<pre><code>## [    OK ] table_varpart_gam_old</code></pre>
+<pre><code>## [    OK ] table_varpart_gam</code></pre>
+<pre><code>## [    OK ] table_varpart_lmer</code></pre>
+<pre><code>## [    OK ] table_hierpart</code></pre>
+<pre><code>## [    OK ] manuscript_suppinfo.tex</code></pre>
+<pre><code>## [    OK ] afas</code></pre>
+<pre><code>## [    OK ] msas</code></pre>
+<pre><code>## [    OK ] table_samplesize</code></pre>
+<pre><code>## [    OK ] manuscript.tex</code></pre>
+<pre><code>## [    OK ] figures/Figure1.pdf</code></pre>
+<pre><code>## [    OK ] figures/Figure2.pdf</code></pre>
+<pre><code>## [    OK ] figures/Figure3.pdf</code></pre>
+<pre><code>## [    OK ] figures/Figure4.pdf</code></pre>
+<pre><code>## [    OK ] figures/Figure5.pdf</code></pre>
+<pre><code>## [    OK ] figures/Figure6.pdf</code></pre>
+<pre><code>## [    OK ] manuscript.pdf</code></pre>
+<pre><code>## [    OK ] figures/FigureS1.pdf</code></pre>
+<pre><code>## [    OK ] figures/FigureS2.pdf</code></pre>
+<pre><code>## [    OK ] figures/FigureS3.pdf</code></pre>
+<pre><code>## [    OK ] figures/FigureS4.pdf</code></pre>
+<pre><code>## [    OK ] figures/FigureS5.pdf</code></pre>
+<pre><code>## [    OK ] manuscript_suppinfo.pdf</code></pre>
+<pre><code>## [ ----- ] all</code></pre>
+<div id="the-function-recreated-all-the-figures-and-a-pdf-of-the-paper.-awesome" class="section level3">
+<h3><strong>The function recreated all the figures and a pdf of the paper. AWESOME!!</strong></h3>
+<p>Links to the materials created:</p>
+<ul>
+<li><a href="https://github.com/annakrystalli/Leaf_mass/blob/master/baadanalysis-master/manuscript.pdf"><strong>manuscript.pdf</strong></a></li>
+<li><a href="https://github.com/annakrystalli/Leaf_mass/blob/master/baadanalysis-master/manuscript_suppinfo.pdf"><strong>manuscript_suppinfo.pdf</strong></a></li>
+<li><a href="https://github.com/annakrystalli/Leaf_mass/tree/master/baadanalysis-master/figures"><strong>figures</strong></a></li>
+</ul>
+</div>
 </div>
 
 
